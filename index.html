@@ -1,0 +1,16 @@
+ <head>
+  <title>The Shopping List</title>
+  <link rel="icon" type="image/png" href="images/flavicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <ul>
+      {{> item }}
+  </ul>
+
+  <template name="item">
+    <li class="item"><img class="left-icon" src="images/checkmark2.png" height="20" width="20"><a>eggs</a><img class="right-icon" src="images/cut.jpg" height="20" width="20"></li>
+  </template>
+  
+</body>
