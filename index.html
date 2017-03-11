@@ -1,6 +1,6 @@
  <head>
   <title>The Shopping List</title>
-  <link rel="icon" type="image/png" href="public/flavicon.png">
+  <link rel="icon" type="image/png" href="public/images/flavicon.png">
 </head>
 
 <body>
@@ -14,7 +14,9 @@
     </section>
     <section class="shopping-list">
       <ul id="needed-list">
+        {{#each items}}
           {{> item }}
+        {{/each}}
       </ul>
     </section>
 

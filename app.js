@@ -2,8 +2,9 @@ Items = new Mongo.Collection('items');
 
 if (Meteor.isClient) {
 	Template.body.helpers({
-		getItems: function() {
+		items: function() {
 			return Items.find();
+			//console.log(Items.find());
 		}
 	});
 
@@ -12,11 +13,15 @@ if (Meteor.isClient) {
 			var item = event.target.title.value;
 			console.log(item);
 			Items.insert({
-				item: item,
+				item: "dummy-data",
 				createdAt: new Date()
 			});
 
+			event.target.title.value = "";
 			return false;
+		},
+		'click #arrow-down': function(event) {
+			$('#needed-list').slideToggle('slow');
 		}
 	})
 }
