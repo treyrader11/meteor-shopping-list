@@ -1,7 +1,6 @@
  <head>
   <title>The Shopping List</title>
   <link rel="icon" type="image/png" href="public/flavicon.png">
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 </head>
 
 <body>
@@ -15,9 +14,7 @@
     </section>
     <section class="shopping-list">
       <ul id="needed-list">
-        {{#each items}}
           {{> item }}
-        {{/each}}
       </ul>
     </section>
 
@@ -27,37 +24,3 @@
   </div>
   
 </body>
-
-<template name="item">
-  <li class="item"><img class="left-icon" src="public/checkmark2.png" height="20" width="20"><a>{{item}}</a><img class="right-icon" src="public/cut.jpg" height="20" width="20"></li>
-</template>
-
-<template name="title">
-    <h4 class="masthead-heading-1">The</h4>
-    <h2 class="masthead-heading-2"><em>Shopping</em></h2>
-    <h1 class="masthead-heading-3">List</h1>
-
-  <section class="shopping-basket">
-    <div id="shopping-basket">
-      <img src="images/shoppingBasket3.png" height="150" width="130" alt="red shopping basket"/>
-    </div>
-  </section>
-  <hr/>
-</template>
-
-<template name="addItem">
-    <form class="add-item">
-      <a><img id="write-image" src="images/hand-and-pen-clipart-2.jpg" alt="hand writing" height="40" width="30"></a>
-      <input value="insert item" id="add-item-input" type="text" name="user" required>
-      <button id="btn" type="button">Add</button>
-    </form>
-    <div id="arrow-down">
-      <a><img src="images/downArrow.png" height="40" width="30" alt="arrow pointing down"></a>
-    </div>
-</template>
-
-<template name="footer">
-  <div>
-      &copy; 2016 TreyRader
-  </div>
-</template>
