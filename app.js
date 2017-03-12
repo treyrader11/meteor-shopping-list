@@ -10,15 +10,14 @@ if (Meteor.isClient) {
 
 	Template.addItem.events({
 		'submit .new-item': function(event) {
-			//var item = event.target.text.value;
-			var item = $('.new-item').val();
+			var item = event.target.item.value;
 			console.log(item);
 			Items.insert({
 				item: item,
 				createdAt: new Date()
 			});
 
-			//event.target.text.value = "";
+			event.target.item.value = "";
 			return false;
 		},
 		'click #arrow-down': function() {
