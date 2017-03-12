@@ -9,6 +9,7 @@
     <header class="masthead">
       {{> title}}
     </header>
+    {{#if currentUser }}
     <section class="text-area">
       {{> addItem }}
     </section>
@@ -19,6 +20,7 @@
         {{/each}}
       </ul>
     </section>
+    {{/if}}
 
     <footer class="footer">
       {{> footer }}
