@@ -1,4 +1,3 @@
 <template name="item">
-  <li class="item"><img class="left-icon" src="public/images/checkmark2.png" height="20" width="20"><a>{{title}}</a><img class="right-icon" src="public/images/cut.jpg" height="20" width="20"></li>
-  <li class="item"><img class="left-icon" src="public/images/checkmark2.png" height="20" width="20"><a>{{createdAt}}</a><img class="right-icon" src="public/images/cut.jpg" height="20" width="20"></li>
+  <li class="item {{#if checked}}checked{{/if}}"><img class="left-icon" src="public/images/checkmark2.png" height="20" width="20">{{createdAt}}<img class="right-icon" src="public/images/cut.jpg" height="20" width="20"></li>
 </template>
