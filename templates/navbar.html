@@ -5,8 +5,17 @@
       <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{> loginButtons}}</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Hide Checked Items</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span data-action="{{#if hideChecked}}show-checked{{else}}hide-checked{{/if}}" class="hide-checked">{{#if hideChecked}}Show{{else}}Hide{{/if}} checked items</span></a></li>
+        </ul>
+      </li>
+
     </ul>
   </div>
 </nav>
 </template>
+
+
